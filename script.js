@@ -5,11 +5,7 @@
 // ─── NAVBAR SCROLL ────────────────────────────────────────
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
 // ─── MOBILE NAV TOGGLE ────────────────────────────────────
@@ -20,7 +16,6 @@ navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// Close mobile nav when a link is clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
@@ -29,7 +24,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 // ─── SCROLL REVEAL ────────────────────────────────────────
 const revealEls = document.querySelectorAll(
-  '.album-card, .mission-card, .milestone, .press-card, .venue, .fact, .collab-list span'
+  '.bio-layout > *, .music-feature, .album-art, .art-item, .story-card, .video-card, .pq, .stat, .listen-strip, .press-quotes, .contact-info'
 );
 
 revealEls.forEach(el => el.classList.add('reveal'));
@@ -43,94 +38,60 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
 );
 
 revealEls.forEach(el => observer.observe(el));
 
-// ─── STAGGER REVEAL FOR GRIDS ──────────────────────────────
-document.querySelectorAll('.albums-grid, .press-grid, .venues-grid, .about-facts').forEach(grid => {
+// Stagger children
+document.querySelectorAll('.art-grid, .press-quotes, .bio-stats').forEach(grid => {
   const children = grid.querySelectorAll('.reveal');
   children.forEach((child, i) => {
     child.style.transitionDelay = `${i * 0.08}s`;
   });
 });
 
-// ─── ACTIVE NAV LINK ON SCROLL ────────────────────────────
-const sections  = document.querySelectorAll('section[id]');
-const navItems  = document.querySelectorAll('.nav-links a');
+// ─── ACTIVE NAV LINK ─────────────────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(section => {
-    const top    = section.offsetTop - 100;
-    const bottom = top + section.offsetHeight;
-    if (window.scrollY >= top && window.scrollY < bottom) {
+    const top = section.offsetTop - 120;
+    if (window.scrollY >= top) {
       current = section.getAttribute('id');
     }
   });
   navItems.forEach(link => {
-    link.style.color = '';
-    if (link.getAttribute('href') === `#${current}`) {
-      link.style.color = 'var(--gold)';
-    }
+    link.classList.toggle('active',
+      link.getAttribute('href') === `#${current}`
+    );
   });
 }, { passive: true });
 
-// ─── VIDEO CLICK HANDLER ──────────────────────────────────
-function openVideo(url) {
-  window.open(url, '_blank', 'noopener,noreferrer');
-}
-
-// ─── CONTACT FORM ─────────────────────────────────────────
-function handleSubmit(e) {
-  e.preventDefault();
-  const form    = e.target;
-  const success = document.getElementById('form-success');
-
-  // Collect form data (in a real deployment, send to a backend/Formspree etc.)
-  const data = {
-    name:    form.name.value,
-    email:   form.email.value,
-    subject: form.subject.value,
-    message: form.message.value,
-  };
-
-  console.log('Form submission:', data);
-
-  // Show success state
-  form.style.display = 'none';
-  success.style.display = 'block';
-
-  // Reset after 6 seconds
-  setTimeout(() => {
-    form.reset();
-    form.style.display = 'flex';
-    success.style.display = 'none';
-  }, 6000);
-}
-
-// ─── FOOTER YEAR ──────────────────────────────────────────
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// ─── SMOOTH ANCHOR OFFSET (for fixed navbar) ──────────────
+// ─── SMOOTH SCROLL WITH OFFSET ────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
     const offset = navbar.offsetHeight + 16;
-    const top    = target.getBoundingClientRect().top + window.scrollY - offset;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
 
 // ─── HERO PARALLAX ────────────────────────────────────────
-const hero = document.getElementById('hero');
-window.addEventListener('scroll', () => {
-  if (window.scrollY < window.innerHeight) {
-    const offset = window.scrollY * 0.3;
-    const content = hero.querySelector('.hero-content');
-    if (content) content.style.transform = `translateY(${offset}px)`;
-  }
-}, { passive: true });
+const heroImg = document.querySelector('.hero-img');
+if (heroImg) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < window.innerHeight) {
+      heroImg.style.transform = `translateY(${window.scrollY * 0.2}px) scale(1.05)`;
+    }
+  }, { passive: true });
+}
+
+// ─── FOOTER YEAR ──────────────────────────────────────────
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
