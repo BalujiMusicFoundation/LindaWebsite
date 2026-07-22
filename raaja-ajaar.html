@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raaja Ajaar | Linda Shanson</title>
 <meta name="description" content="Raaja Ajaar — a poetic work by Linda Shanson written in 1976, revived with new music and poetry.">
@@ -23,9 +24,7 @@
         <li><a href="art.html">Art</a></li>
         <li class="has-dropdown">
           <a href="music.html">Music</a>
-          <div class="dropdown">
-            <a href="music.html#once-upon-a-night">Once Upon a Night</a>
-          </div>
+          <div class="dropdown"><a href="music.html#once-upon-a-night">Once Upon a Night</a></div>
         </li>
         <li class="has-dropdown open">
           <a href="stories.html">Stories &amp; Poetry</a>
@@ -41,24 +40,28 @@
   </div>
 </header>
 
-<section class="tight">
-  <div class="container">
+<section class="page-hero grad-gold tall">
+  <div class="wrap">
     <span class="kicker">Stories &amp; Poetry</span>
     <h1>Raaja Ajaar</h1>
-    <p style="max-width:680px;">It is with great delight that Raaja Ajaar is presented for you to experience with music and poetry, to share a revelry of the imagination.</p>
-    <p style="max-width:680px;">Since it was written in 1976, it has lain dormant except for one theatrical performance in London which had an eager audience queuing up to see it. Surrender to its charms and share the journey with Raaja and Ajaar.</p>
+    <p>A revelry of the imagination, presented with music and poetry.</p>
+  </div>
+</section>
+
+<section class="panel cream">
+  <div class="wrap narrow reveal">
+    <p style="font-size:1.15rem;">It is with great delight that Raaja Ajaar is presented for you to experience with music and poetry, to share a revelry of the imagination.</p>
+    <p>Since it was written in 1976, it has lain dormant except for one theatrical performance in London which had an eager audience queuing up to see it. Surrender to its charms and share the journey with Raaja and Ajaar.</p>
     <div class="btn-row">
       <a class="btn solid" href="https://www.lindashanson.com/_files/ugd/f66659_bc071b5a6ebc4b669e1cda8df90aae70.pdf" target="_blank" rel="noopener">Listen along with the script</a>
     </div>
   </div>
 </section>
 
-<section class="alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="kicker">An extract</span>
-      <h2>The blessings of Aphrodite to Ajaar</h2>
-    </div>
+<section class="panel cream-2">
+  <div class="wrap narrow reveal">
+    <span class="kicker" style="color:var(--rose)">An extract</span>
+    <h2 style="margin-bottom:.6em;">The blessings of Aphrodite to Ajaar</h2>
     <div class="extract">
       <p><em>Ajaar:</em><br>
       &ldquo;Oh my sweet moon you call and I answer<br>
@@ -66,31 +69,24 @@
       afresh this time never to be repeated<br>
       I salute you with my entire being<br>
       I rejoice in the life which flows between us.&rdquo;</p>
-
       <p><em>Narrator:</em><br>
       She looks into the bottomless darkness of night.<br>
       She feels them staring like coals, dark, luminous in her skull.<br>
-      Why does she moan so? Who does she cry for?<br>
       It is as though generations have been silent till now<br>
       and in her they must finally be heard.</p>
-
       <p>Aphrodite endows her with the power of love.<br>
       This is the thread that binds us all together.<br>
       Take courage and surrender to it.<br>
       Take strength and follow it.</p>
-
       <p class="signoff">&mdash; from Raaja Ajaar, Chapter 2</p>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div>
-        <h3 style="color:var(--aqua-soft)">Linda Shanson</h3>
-        <p class="small">Musician &middot; Songwriter &middot; Author</p>
-      </div>
+      <div><h3>Linda Shanson</h3><p class="small">Singer &middot; Writer &middot; Painter</p></div>
       <ul class="footer-nav">
         <li><a href="bio.html">Bio</a></li>
         <li><a href="art.html">Art</a></li>
@@ -101,17 +97,15 @@
       <div>
         <p class="small"><a href="mailto:lindashanson1@hotmail.com">lindashanson1@hotmail.com</a></p>
         <p class="small"><a href="https://www.instagram.com/lindashanson" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/lindashansonartist/" target="_blank" rel="noopener">Facebook</a></p>
-        <p class="small"><a href="https://www.balujimusicfoundation.org" target="_blank" rel="noopener">Baluji Music Foundation</a></p>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span id="year"></span> Linda Shanson</span>
-      <span>Musician &middot; Songwriter &middot; Author</span>
+      <span>Singer &middot; Writer &middot; Painter</span>
     </div>
   </div>
 </footer>
 
 <script src="assets/js/nav.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

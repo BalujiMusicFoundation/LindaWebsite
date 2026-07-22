@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Linda Shanson</title>
 <meta name="description" content="Get in touch with Linda Shanson.">
@@ -23,9 +24,7 @@
         <li><a href="art.html">Art</a></li>
         <li class="has-dropdown">
           <a href="music.html">Music</a>
-          <div class="dropdown">
-            <a href="music.html#once-upon-a-night">Once Upon a Night</a>
-          </div>
+          <div class="dropdown"><a href="music.html#once-upon-a-night">Once Upon a Night</a></div>
         </li>
         <li class="has-dropdown">
           <a href="stories.html">Stories &amp; Poetry</a>
@@ -41,14 +40,19 @@
   </div>
 </header>
 
-<section>
-  <div class="container text-center" style="max-width:640px;">
+<section class="page-hero grad-rose tall">
+  <div class="wrap">
     <span class="kicker">Get in touch</span>
     <h1>Contact</h1>
-    <figure style="max-width:280px;margin:0 auto 30px;border-radius:50%;overflow:hidden;">
+    <p>For bookings, press or general enquiries, Linda would love to hear from you.</p>
+  </div>
+</section>
+
+<section class="panel cream">
+  <div class="wrap narrow text-center reveal">
+    <figure style="max-width:240px;margin:0 auto 32px;border-radius:50%;overflow:hidden;box-shadow:0 22px 50px -24px rgba(20,27,77,.55);">
       <img src="assets/images/portrait-red.jpg" alt="Linda Shanson">
     </figure>
-    <p>For bookings, press or general enquiries, Linda would love to hear from you.</p>
     <div class="btn-row" style="justify-content:center;">
       <a class="btn solid" href="mailto:lindashanson1@hotmail.com">lindashanson1@hotmail.com</a>
       <a class="btn" href="https://www.instagram.com/lindashanson" target="_blank" rel="noopener">Instagram</a>
@@ -57,27 +61,23 @@
   </div>
 </section>
 
-<section class="alt tight">
-  <div class="container text-center">
+<section class="panel night pad-sm">
+  <div class="wrap text-center reveal">
     <span class="kicker">Listen</span>
-    <h3>Streaming &amp; catalogue</h3>
+    <h3 style="margin-bottom:1em;">Streaming &amp; catalogue</h3>
     <div class="btn-row" style="justify-content:center;">
-      <a class="btn" href="https://jazzorient.bandcamp.com" target="_blank" rel="noopener">Bandcamp</a>
-      <a class="btn" href="https://music.apple.com/us/artist/linda-shanovitch/373686639" target="_blank" rel="noopener">Apple Music</a>
-      <a class="btn" href="https://www.deezer.com/en/artist/1846591" target="_blank" rel="noopener">Deezer</a>
-      <a class="btn" href="https://www.discogs.com/artist/3557246-Linda-Shanson" target="_blank" rel="noopener">Discogs</a>
-      <a class="btn" href="https://www.youtube.com/@BalujiMusicFoundation" target="_blank" rel="noopener">YouTube</a>
+      <a class="btn light" href="https://jazzorient.bandcamp.com" target="_blank" rel="noopener">Bandcamp</a>
+      <a class="btn light" href="https://music.apple.com/us/artist/linda-shanovitch/373686639" target="_blank" rel="noopener">Apple Music</a>
+      <a class="btn light" href="https://www.deezer.com/en/artist/1846591" target="_blank" rel="noopener">Deezer</a>
+      <a class="btn light" href="https://www.discogs.com/artist/3557246-Linda-Shanson" target="_blank" rel="noopener">Discogs</a>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div>
-        <h3 style="color:var(--aqua-soft)">Linda Shanson</h3>
-        <p class="small">Musician &middot; Songwriter &middot; Author</p>
-      </div>
+      <div><h3>Linda Shanson</h3><p class="small">Singer &middot; Writer &middot; Painter</p></div>
       <ul class="footer-nav">
         <li><a href="bio.html">Bio</a></li>
         <li><a href="art.html">Art</a></li>
@@ -88,17 +88,15 @@
       <div>
         <p class="small"><a href="mailto:lindashanson1@hotmail.com">lindashanson1@hotmail.com</a></p>
         <p class="small"><a href="https://www.instagram.com/lindashanson" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/lindashansonartist/" target="_blank" rel="noopener">Facebook</a></p>
-        <p class="small"><a href="https://www.balujimusicfoundation.org" target="_blank" rel="noopener">Baluji Music Foundation</a></p>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span id="year"></span> Linda Shanson</span>
-      <span>Musician &middot; Songwriter &middot; Author</span>
+      <span>Singer &middot; Writer &middot; Painter</span>
     </div>
   </div>
 </footer>
 
 <script src="assets/js/nav.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

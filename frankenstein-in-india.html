@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Frankenstein in India | Linda Shanson</title>
 <meta name="description" content="Frankenstein in India — an award-winning short story by Linda Shanson, winner of the 2018 Elmbridge Literary Competition.">
@@ -12,7 +13,7 @@
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header over-hero">
   <div class="nav-bar">
     <a href="index.html" class="brand">Linda Shanson</a>
     <nav>
@@ -23,9 +24,7 @@
         <li><a href="art.html">Art</a></li>
         <li class="has-dropdown">
           <a href="music.html">Music</a>
-          <div class="dropdown">
-            <a href="music.html#once-upon-a-night">Once Upon a Night</a>
-          </div>
+          <div class="dropdown"><a href="music.html#once-upon-a-night">Once Upon a Night</a></div>
         </li>
         <li class="has-dropdown open">
           <a href="stories.html">Stories &amp; Poetry</a>
@@ -41,37 +40,30 @@
   </div>
 </header>
 
-<section class="tight">
-  <div class="container with-side-image">
-    <div>
-      <span class="kicker">Stories &amp; Poetry</span>
-      <h1>Frankenstein in India</h1>
+<section class="hero-full" style="min-height:80svh;">
+  <img class="bg" src="assets/images/frankenstein-tiger.png" alt="Tiger illustration for Frankenstein in India" style="object-position:center 30%;">
+  <div class="hero-inner">
+    <span class="kicker" style="color:var(--gold)">Stories &amp; Poetry</span>
+    <h1>Frankenstein<br>in India</h1>
+    <p class="hero-poem">&ldquo;Doomed, we travelled like <em>diabolic nomads</em> to remote regions of India, testing our music on unsuspecting spectators.&rdquo;</p>
+  </div>
+</section>
 
-      <blockquote class="quote-block" style="font-size:1.35rem;">
-        &ldquo;Doomed, we travelled like diabolic nomads to remote regions of India, testing our music on unsuspecting spectators.&rdquo;
-      </blockquote>
-
-      <p style="max-width:680px;"><strong>Winner of the 2018 Elmbridge Literary Competition, Adult Story category.</strong></p>
-
-      <p style="max-width:680px;">The Elmbridge Literary Competition was established by The RC Sherriff Trust, an independent arts charity working in the Borough of Elmbridge, together with Elmbridge Borough Council. Previous competitions have covered subjects as varied as Dickens, fantasy, love and short radio plays. In celebration of the 200th anniversary of the publication of Mary Shelley's <em>Frankenstein</em>, the themes for the 2017&ndash;18 competition were &ldquo;Things That Go Bump in the Night&rdquo; (ages 5&ndash;13) and &ldquo;A Shiver Down the Spine&rdquo; (ages 14&ndash;18 and Adult).</p>
-
-      <div class="btn-row">
-        <a class="btn solid" href="https://sampsonlow.co/tag/elmbridge-literary-competition/" target="_blank" rel="noopener">More about the competition</a>
-      </div>
+<section class="panel cream">
+  <div class="wrap narrow reveal">
+    <p style="font-size:1.2rem;color:var(--rose);font-weight:500;">Winner of the 2018 Elmbridge Literary Competition, Adult Story category.</p>
+    <p>The Elmbridge Literary Competition was established by The RC Sherriff Trust, an independent arts charity working in the Borough of Elmbridge, together with Elmbridge Borough Council. Previous competitions have covered subjects as varied as Dickens, fantasy, love and short radio plays.</p>
+    <p>In celebration of the 200th anniversary of the publication of Mary Shelley's <em>Frankenstein</em>, the themes for the 2017&ndash;18 competition were &ldquo;Things That Go Bump in the Night&rdquo; (ages 5&ndash;13) and &ldquo;A Shiver Down the Spine&rdquo; (ages 14&ndash;18 and Adult).</p>
+    <div class="btn-row">
+      <a class="btn solid" href="https://sampsonlow.co/tag/elmbridge-literary-competition/" target="_blank" rel="noopener">More about the competition</a>
     </div>
-    <figure>
-      <img src="assets/images/frankenstein-tiger.png" alt="Tiger illustration for Frankenstein in India">
-    </figure>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div>
-        <h3 style="color:var(--aqua-soft)">Linda Shanson</h3>
-        <p class="small">Musician &middot; Songwriter &middot; Author</p>
-      </div>
+      <div><h3>Linda Shanson</h3><p class="small">Singer &middot; Writer &middot; Painter</p></div>
       <ul class="footer-nav">
         <li><a href="bio.html">Bio</a></li>
         <li><a href="art.html">Art</a></li>
@@ -82,17 +74,15 @@
       <div>
         <p class="small"><a href="mailto:lindashanson1@hotmail.com">lindashanson1@hotmail.com</a></p>
         <p class="small"><a href="https://www.instagram.com/lindashanson" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/lindashansonartist/" target="_blank" rel="noopener">Facebook</a></p>
-        <p class="small"><a href="https://www.balujimusicfoundation.org" target="_blank" rel="noopener">Baluji Music Foundation</a></p>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span id="year"></span> Linda Shanson</span>
-      <span>Musician &middot; Songwriter &middot; Author</span>
+      <span>Singer &middot; Writer &middot; Painter</span>
     </div>
   </div>
 </footer>
 
 <script src="assets/js/nav.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

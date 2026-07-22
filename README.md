@@ -2,6 +2,8 @@
 
 Source for Linda Shanson's website — a plain static HTML/CSS site (no build step), designed to be easy to edit by hand and hosted on GitHub Pages.
 
+The design is **painterly and full-bleed**: edge-to-edge painting backgrounds, colours drawn from Linda's own paintings, with a floating navigation over the hero. The colour palette lives as CSS variables at the top of `assets/css/style.css` — change those values to re-theme the whole site.
+
 ## Structure
 
 ```
@@ -44,5 +46,6 @@ then visit `http://localhost:8000`.
 ## Notes
 
 - A few external links point to existing hosted assets (the Bandcamp release, the Raaja Ajaar script PDF, the Elmbridge competition page) rather than being migrated in.
-- Photos in `assets/images` were sourced from the previous Wix site and the Google Drive archive; several are large (1MB+) and could be compressed further for faster load times.
-- The "Art" section from the original site's navigation had no distinct content behind it at time of writing, so a sample artwork was folded into the Home page instead — expand into its own page if there's a body of work to show.
+- Images in `assets/images` come from the previous Wix site and from Linda's Google Drive (the "Linda Website 2026" and "paintings 2018" folders). Several paintings are large (1–6MB) and should be compressed before the site goes fully live, for faster loading.
+- Scroll-in animations are a **progressive enhancement**: a one-line inline script in each page's `<head>` adds a `js` class to `<html>`, and the CSS only hides `.reveal` elements when that class is present. If JavaScript ever fails to load, all content still shows — nothing is hidden behind a broken script.
+- `art-spring-sister.jpg` and `art-spirit-of-spring.jpg` are faint line sketches; they sit at the end of the Art gallery. Swap in stronger scans if available.

@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Art | Linda Shanson</title>
-<meta name="description" content="Original watercolour and mixed-media artwork by Linda Shanson.">
+<meta name="description" content="Original watercolour, crayon and mixed-media paintings by Linda Shanson.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header over-hero">
   <div class="nav-bar">
     <a href="index.html" class="brand">Linda Shanson</a>
     <nav>
@@ -23,9 +24,7 @@
         <li><a href="art.html" class="active">Art</a></li>
         <li class="has-dropdown">
           <a href="music.html">Music</a>
-          <div class="dropdown">
-            <a href="music.html#once-upon-a-night">Once Upon a Night</a>
-          </div>
+          <div class="dropdown"><a href="music.html#once-upon-a-night">Once Upon a Night</a></div>
         </li>
         <li class="has-dropdown">
           <a href="stories.html">Stories &amp; Poetry</a>
@@ -41,42 +40,32 @@
   </div>
 </header>
 
-<section class="tight">
-  <div class="container">
-    <span class="kicker">Art</span>
-    <h1>Painting &amp; sketches</h1>
-    <p style="max-width:680px;">Alongside music and writing, Linda has always painted — loose, expressive work in watercolour, crayon and ink, made wherever she happened to be living at the time.</p>
+<section class="hero-full" style="min-height:78svh;">
+  <img class="bg" src="assets/images/art-heart.jpg" alt="Heart painting by Linda Shanson">
+  <div class="hero-inner">
+    <span class="kicker" style="color:var(--gold)">Art</span>
+    <h1>Painting</h1>
+    <p class="hero-poem">Loose, vivid work in watercolour, crayon and ink — made wherever she has lived.</p>
   </div>
 </section>
 
-<section class="tight">
-  <div class="container">
-    <div class="grid cols-2">
-      <figure>
-        <img src="assets/images/art-mexico-city-1991.jpg" alt="Watercolour and crayon artwork by Linda Shanson, Mexico City, 1991">
-        <figcaption>Mexico City, 1991</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/images/art-heart.jpg" alt="Abstract heart-shaped painting by Linda Shanson">
-      </figure>
-      <figure>
-        <img src="assets/images/art-bird-figure.jpg" alt="Bird-figure painting by Linda Shanson">
-      </figure>
-      <figure>
-        <img src="assets/images/art-costume-sketch.jpg" alt="Dance costume sketch by Linda Shanson">
-        <figcaption>Costume design sketch</figcaption>
-      </figure>
+<section class="panel cream">
+  <div class="wrap">
+    <div class="gallery reveal">
+      <figure><img src="assets/images/art-mexico-city-1991.jpg" alt="Two faces painting" loading="lazy"><figcaption>Mexico City, 1991</figcaption></figure>
+      <figure><img src="assets/images/art-heart.jpg" alt="Heart painting" loading="lazy"><figcaption>Heart</figcaption></figure>
+      <figure><img src="assets/images/art-bird-figure.jpg" alt="Bird-figure painting" loading="lazy"><figcaption>Bird figure</figcaption></figure>
+      <figure><img src="assets/images/art-costume-sketch.jpg" alt="Dance costume sketch" loading="lazy"><figcaption>Costume design sketch</figcaption></figure>
+      <figure><img src="assets/images/art-spring-sister.jpg" alt="Spring Sister sketch" loading="lazy"><figcaption>Spring Sister</figcaption></figure>
+      <figure><img src="assets/images/art-spirit-of-spring.jpg" alt="Spirit of Spring sketch" loading="lazy"><figcaption>Spirit of Spring</figcaption></figure>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div>
-        <h3 style="color:var(--aqua-soft)">Linda Shanson</h3>
-        <p class="small">Musician &middot; Songwriter &middot; Author</p>
-      </div>
+      <div><h3>Linda Shanson</h3><p class="small">Singer &middot; Writer &middot; Painter</p></div>
       <ul class="footer-nav">
         <li><a href="bio.html">Bio</a></li>
         <li><a href="art.html">Art</a></li>
@@ -87,17 +76,15 @@
       <div>
         <p class="small"><a href="mailto:lindashanson1@hotmail.com">lindashanson1@hotmail.com</a></p>
         <p class="small"><a href="https://www.instagram.com/lindashanson" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/lindashansonartist/" target="_blank" rel="noopener">Facebook</a></p>
-        <p class="small"><a href="https://www.balujimusicfoundation.org" target="_blank" rel="noopener">Baluji Music Foundation</a></p>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span id="year"></span> Linda Shanson</span>
-      <span>Musician &middot; Songwriter &middot; Author</span>
+      <span>Singer &middot; Writer &middot; Painter</span>
     </div>
   </div>
 </footer>
 
 <script src="assets/js/nav.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

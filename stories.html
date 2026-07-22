@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stories &amp; Poetry | Linda Shanson</title>
 <meta name="description" content="Stories and poetry by Linda Shanson: Raaja Ajaar, Journey with the Gods, and Frankenstein in India.">
@@ -23,9 +24,7 @@
         <li><a href="art.html">Art</a></li>
         <li class="has-dropdown">
           <a href="music.html">Music</a>
-          <div class="dropdown">
-            <a href="music.html#once-upon-a-night">Once Upon a Night</a>
-          </div>
+          <div class="dropdown"><a href="music.html#once-upon-a-night">Once Upon a Night</a></div>
         </li>
         <li class="has-dropdown open">
           <a href="stories.html" class="active">Stories &amp; Poetry</a>
@@ -41,41 +40,40 @@
   </div>
 </header>
 
-<section class="tight">
-  <div class="container">
+<section class="page-hero grad-purple tall">
+  <div class="wrap">
     <span class="kicker">Stories &amp; Poetry</span>
     <h1>Words alongside music</h1>
-    <p style="max-width:680px;">Linda's writing spans children's mythology, adult short fiction and long-dormant poetry brought back to life — each written in the same voice that shapes her songs.</p>
+    <p>Children's mythology, adult short fiction and long-dormant poetry brought back to life — each written in the same voice that shapes her songs.</p>
   </div>
 </section>
 
-<section class="tight">
-  <div class="container grid cols-3">
-    <div class="card">
-      <h3>Raaja Ajaar</h3>
-      <p>Written in 1976 and revived with music and poetry — a revelry of the imagination, once staged to a queuing London audience.</p>
-      <a class="read-more" href="raaja-ajaar.html">Read more &rarr;</a>
-    </div>
-    <div class="card">
-      <h3>Journey with the Gods</h3>
-      <p>Vinita and Deepak meet the gods and heroes of Indian mythology, in a book featured by dancer Akram Khan reading to his own daughter.</p>
-      <a class="read-more" href="journey-with-the-gods.html">Read more &rarr;</a>
-    </div>
-    <div class="card">
-      <h3>Frankenstein in India</h3>
-      <p>Winner of the 2018 Elmbridge Literary Competition, Adult Story category, marking 200 years of Mary Shelley's <em>Frankenstein</em>.</p>
-      <a class="read-more" href="frankenstein-in-india.html">Read more &rarr;</a>
+<section class="panel cream">
+  <div class="wrap">
+    <div class="grid cols-3 reveal">
+      <a class="card c-gold" href="raaja-ajaar.html" style="color:inherit">
+        <h3>Raaja Ajaar</h3>
+        <p>Written in 1976 and revived with music and poetry — a revelry of the imagination, once staged to a queuing London audience.</p>
+        <span class="read-more" style="color:var(--rose)">Read more &rarr;</span>
+      </a>
+      <a class="card c-turq" href="journey-with-the-gods.html" style="color:inherit">
+        <h3>Journey with the Gods</h3>
+        <p>Vinita and Deepak meet the gods and heroes of Indian mythology, in a book featured by dancer Akram Khan reading to his own daughter.</p>
+        <span class="read-more" style="color:var(--rose)">Read more &rarr;</span>
+      </a>
+      <a class="card c-rose" href="frankenstein-in-india.html" style="color:inherit">
+        <h3>Frankenstein in India</h3>
+        <p>Winner of the 2018 Elmbridge Literary Competition, Adult Story category, marking 200 years of Mary Shelley's <em>Frankenstein</em>.</p>
+        <span class="read-more" style="color:var(--rose)">Read more &rarr;</span>
+      </a>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
-      <div>
-        <h3 style="color:var(--aqua-soft)">Linda Shanson</h3>
-        <p class="small">Musician &middot; Songwriter &middot; Author</p>
-      </div>
+      <div><h3>Linda Shanson</h3><p class="small">Singer &middot; Writer &middot; Painter</p></div>
       <ul class="footer-nav">
         <li><a href="bio.html">Bio</a></li>
         <li><a href="art.html">Art</a></li>
@@ -86,17 +84,15 @@
       <div>
         <p class="small"><a href="mailto:lindashanson1@hotmail.com">lindashanson1@hotmail.com</a></p>
         <p class="small"><a href="https://www.instagram.com/lindashanson" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/lindashansonartist/" target="_blank" rel="noopener">Facebook</a></p>
-        <p class="small"><a href="https://www.balujimusicfoundation.org" target="_blank" rel="noopener">Baluji Music Foundation</a></p>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span id="year"></span> Linda Shanson</span>
-      <span>Musician &middot; Songwriter &middot; Author</span>
+      <span>Singer &middot; Writer &middot; Painter</span>
     </div>
   </div>
 </footer>
 
 <script src="assets/js/nav.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
