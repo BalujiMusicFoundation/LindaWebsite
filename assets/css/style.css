@@ -328,6 +328,23 @@ figcaption{
 .photo-strip{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 @media (max-width: 700px){ .photo-strip{ grid-template-columns: 1fr 1fr; } }
 
+/* ---------- Header + side image layout ---------- */
+
+.with-side-image{
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 40px;
+  align-items: start;
+}
+.with-side-image figure img{
+  border-radius: 10px;
+  box-shadow: 0 20px 40px -20px rgba(1,84,80,0.35);
+}
+@media (max-width: 700px){
+  .with-side-image{ grid-template-columns: 1fr; }
+  .with-side-image figure{ max-width: 260px; margin: 0 auto; order: -1; }
+}
+
 /* ---------- Bio page specifics ---------- */
 
 .bio-columns{

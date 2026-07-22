@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art | Linda Shanson</title>
+<meta name="description" content="Original watercolour and mixed-media artwork by Linda Shanson.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-bar">
+    <a href="index.html" class="brand">Linda Shanson</a>
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="art.html" class="active">Art</a></li>
+        <li class="has-dropdown">
+          <a href="music.html">Music</a>
+          <div class="dropdown">
+            <a href="music.html#once-upon-a-night">Once Upon a Night</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="stories.html">Stories &amp; Poetry</a>
+          <div class="dropdown">
+            <a href="raaja-ajaar.html">Raaja Ajaar</a>
+            <a href="journey-with-the-gods.html">Journey with the Gods</a>
+            <a href="frankenstein-in-india.html">Frankenstein in India</a>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="container">
+    <span class="kicker">Art</span>
+    <h1>Painting &amp; sketches</h1>
+    <p style="max-width:680px;">Alongside music and writing, Linda has always painted — loose, expressive work in watercolour, crayon and ink, made wherever she happened to be living at the time.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="container">
+    <div class="grid cols-2">
+      <figure>
+        <img src="assets/images/art-mexico-city-1991.jpg" alt="Watercolour and crayon artwork by Linda Shanson, Mexico City, 1991">
+        <figcaption>Mexico City, 1991</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/art-heart.jpg" alt="Abstract heart-shaped painting by Linda Shanson">
+      </figure>
+      <figure>
+        <img src="assets/images/art-bird-figure.jpg" alt="Bird-figure painting by Linda Shanson">
+      </figure>
+      <figure>
+        <img src="assets/images/art-costume-sketch.jpg" alt="Dance costume sketch by Linda Shanson">
+        <figcaption>Costume design sketch</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 style="color:var(--aqua-soft)">Linda Shanson</h3>
+        <p class="small">Musician &middot; Songwriter &middot; Author</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="stories.html">Stories &amp; Poetry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div>
+        <p class="small"><a href="mailto:lindashanson1@hotmail.com">lindashanson1@hotmail.com</a></p>
+        <p class="small"><a href="https://www.instagram.com/lindashanson" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/lindashansonartist/" target="_blank" rel="noopener">Facebook</a></p>
+        <p class="small"><a href="https://www.balujimusicfoundation.org" target="_blank" rel="noopener">Baluji Music Foundation</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Linda Shanson</span>
+      <span>Musician &middot; Songwriter &middot; Author</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
