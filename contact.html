@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Linda Shanson</title>
+<meta name="description" content="Get in touch with Linda Shanson.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-bar">
+    <a href="index.html" class="brand">Linda Shanson</a>
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li class="has-dropdown">
+          <a href="music.html">Music</a>
+          <div class="dropdown">
+            <a href="music.html#once-upon-a-night">Once Upon a Night</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="stories.html">Stories &amp; Poetry</a>
+          <div class="dropdown">
+            <a href="raaja-ajaar.html">Raaja Ajaar</a>
+            <a href="journey-with-the-gods.html">Journey with the Gods</a>
+            <a href="frankenstein-in-india.html">Frankenstein in India</a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="container text-center" style="max-width:640px;">
+    <span class="kicker">Get in touch</span>
+    <h1>Contact</h1>
+    <figure style="max-width:280px;margin:0 auto 30px;border-radius:50%;overflow:hidden;">
+      <img src="assets/images/portrait-red.jpg" alt="Linda Shanson">
+    </figure>
+    <p>For bookings, press or general enquiries, Linda would love to hear from you.</p>
+    <div class="btn-row" style="justify-content:center;">
+      <a class="btn solid" href="mailto:lindashanson1@hotmail.com">lindashanson1@hotmail.com</a>
+      <a class="btn" href="https://www.instagram.com/lindashanson" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 style="color:var(--aqua-soft)">Linda Shanson</h3>
+        <p class="small">Musician &middot; Songwriter &middot; Author</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="stories.html">Stories &amp; Poetry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div>
+        <p class="small"><a href="mailto:lindashanson1@hotmail.com">lindashanson1@hotmail.com</a></p>
+        <p class="small"><a href="https://www.instagram.com/lindashanson" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Linda Shanson</span>
+      <span>Co-founder, Baluji Music Foundation</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/nav.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
