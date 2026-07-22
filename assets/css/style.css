@@ -17,12 +17,13 @@
   --purple:     #6B4E9E;
   --green:      #46A24B;
 
-  --cream:      #FBEEF1;   /* pastel pink paper */
-  --cream-2:    #F6DFE4;
+  --cream:      #F5CBD6;   /* pastel pink paper */
+  --cream-2:    #EFB9C8;
   --ink:        #24243A;
   --ink-soft:   #4d4c63;
 
   --font: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
 
   --wrap: 1200px;
   --wrap-narrow: 780px;
@@ -44,16 +45,17 @@ body{
 }
 
 h1,h2,h3,h4{
-  font-family:var(--font);
-  font-weight:200;
-  line-height:1.08;
+  font-family:var(--font-display);
+  font-optical-sizing:auto;
+  font-weight:560;
+  line-height:1.06;
   margin:0 0 .5em;
   color:var(--teal-deep);
   letter-spacing:-.01em;
 }
-h1{ font-size:clamp(3rem,8vw,6.5rem); }
+h1{ font-size:clamp(3rem,8vw,6.5rem); font-weight:600; }
 h2{ font-size:clamp(2rem,5vw,3.6rem); }
-h3{ font-size:clamp(1.35rem,2.6vw,1.9rem); font-weight:300; }
+h3{ font-size:clamp(1.35rem,2.6vw,1.9rem); font-weight:500; }
 
 p{ margin:0 0 1.2em; }
 a{ color:var(--teal); text-decoration:none; transition:color .2s; }
@@ -107,7 +109,8 @@ img{ max-width:100%; display:block; }
   display:flex; align-items:center; justify-content:space-between;
 }
 .brand{
-  font-weight:300; font-size:1.35rem; letter-spacing:.02em;
+  font-family:var(--font-display);
+  font-weight:600; font-size:1.4rem; letter-spacing:.01em;
   color:var(--teal-deep);
 }
 .over-hero .brand,
@@ -204,12 +207,13 @@ img{ max-width:100%; display:block; }
   text-shadow:0 4px 40px rgba(0,0,0,.35);
 }
 .hero-poem{
-  font-weight:200; font-size:clamp(1.3rem,3.2vw,2.1rem);
-  color:#fff; max-width:22ch; line-height:1.25;
+  font-family:var(--font-display); font-weight:400;
+  font-size:clamp(1.3rem,3.2vw,2.1rem);
+  color:#fff; max-width:22ch; line-height:1.3;
   text-shadow:0 2px 24px rgba(0,0,0,.4);
   margin:0 0 1.6em;
 }
-.hero-poem em{ font-style:italic; color:var(--gold); }
+.hero-poem em{ font-style:italic; font-weight:500; color:var(--gold); }
 .hero-roles{
   text-transform:uppercase; letter-spacing:.32em; font-size:.78rem;
   color:rgba(255,255,255,.85); margin-bottom:2em;
@@ -356,7 +360,8 @@ img{ max-width:100%; display:block; }
 @media (max-width:700px){ .press-grid{ grid-template-columns:1fr; } }
 
 .pull{
-  font-weight:200; font-size:clamp(1.6rem,3.4vw,2.5rem);
+  font-family:var(--font-display); font-weight:500;
+  font-size:clamp(1.6rem,3.4vw,2.5rem);
   line-height:1.28; color:#fff; max-width:16ch;
 }
 .pull cite{ display:block; margin-top:.5em; font-size:.8rem; letter-spacing:.16em;
@@ -409,7 +414,7 @@ figcaption{ font-size:.84rem; color:var(--ink-soft); }
   font-size:1.05rem; box-shadow:0 18px 50px -34px rgba(20,27,77,.5);
 }
 .extract .signoff{ font-weight:600; color:var(--rose); margin-top:1.4em; }
-.lyric{ white-space:pre-line; font-weight:300; font-size:1.12rem; color:var(--teal-deep); }
+.lyric{ white-space:pre-line; font-family:var(--font-display); font-weight:400; font-style:italic; font-size:1.2rem; color:var(--teal-deep); }
 
 .fact-list{ list-style:none; margin:0; padding:0; }
 .fact-list li{ padding:15px 0; border-bottom:1px solid rgba(6,81,76,.14); font-size:.95rem; }
