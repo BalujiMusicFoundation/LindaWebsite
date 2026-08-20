@@ -969,6 +969,20 @@ section {
 
 .book-info p { font-size: 0.9rem; margin-bottom: 1.2rem; color: var(--text-muted); }
 
+.spotify-embed {
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.spotify-label {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-dark) !important;
+  margin-bottom: 0.75rem !important;
+}
+
 .book-poetry { padding: 2.5rem; background: var(--cream); border-radius: var(--radius); }
 
 .book-poetry h3 {
