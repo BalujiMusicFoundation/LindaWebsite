@@ -461,3 +461,127 @@ html.js .reveal.in{ opacity:1; transform:none; }
   html.js .reveal{ opacity:1; transform:none; transition:none; }
   .hero-full .bg{ animation:none; transform:none; }
 }
+
+/* ============================================================
+   MUSIC PLAYER
+   ============================================================ */
+.player{
+  max-width:840px; margin:48px auto 0;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:18px; overflow:hidden;
+}
+
+/* --- now playing --- */
+.player-now{ display:flex; gap:26px; padding:28px; align-items:center; }
+.player-art{
+  flex:0 0 148px; width:148px; height:148px; border-radius:12px;
+  overflow:hidden; background:var(--night-2);
+}
+.player-art img{ width:100%; height:100%; object-fit:cover; display:block; }
+.player-meta{ flex:1; min-width:0; }
+.player-eyebrow{
+  display:block; font-size:.68rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:.45em;
+}
+.player-title{ color:#fff; font-size:1.55rem; margin:0 0 .12em; }
+.player-sub{ font-size:.92rem; color:#cdd4f0; margin:0 0 1.1em; }
+
+/* --- scrub bar --- */
+.player-time{ display:flex; align-items:center; gap:12px; font-size:.78rem; color:#cdd4f0; }
+.player-elapsed,.player-total{ flex:0 0 auto; font-variant-numeric:tabular-nums; }
+/* Taller than the rail it holds, so it stays easy to hit on a phone. */
+.player-scrub{ flex:1; height:22px; display:flex; align-items:center; cursor:pointer; }
+.player-rail{
+  position:relative; width:100%; height:4px; border-radius:2px;
+  background:rgba(255,255,255,.22);
+}
+.player-fill{
+  position:absolute; left:0; top:0; height:100%; width:0;
+  border-radius:2px; background:linear-gradient(90deg,var(--rose),var(--gold));
+}
+.player-fill::after{
+  content:''; position:absolute; right:-5px; top:50%; transform:translateY(-50%);
+  width:10px; height:10px; border-radius:50%; background:var(--gold);
+  opacity:0; transition:opacity .2s ease;
+}
+.player.is-playing .player-fill::after,
+.player-scrub:hover .player-fill::after,
+.player-scrub:focus-visible .player-fill::after{ opacity:1; }
+.player-scrub:focus-visible{ outline:2px solid var(--gold); outline-offset:4px; border-radius:4px; }
+
+/* --- transport --- */
+.player-ctrls{ display:flex; align-items:center; gap:16px; margin-top:1.1em; }
+.pl-btn{
+  display:grid; place-items:center; width:40px; height:40px;
+  border-radius:50%; border:1px solid rgba(255,255,255,.28);
+  background:none; color:#fff; cursor:pointer;
+  transition:background .2s ease, border-color .2s ease, color .2s ease;
+}
+.pl-btn:hover{ background:rgba(255,255,255,.14); border-color:#fff; }
+.pl-btn:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+.pl-btn svg{ width:16px; height:16px; fill:currentColor; }
+.pl-play{
+  width:56px; height:56px;
+  background:var(--gold); border-color:var(--gold); color:var(--night);
+}
+.pl-play:hover{ background:#fff; border-color:#fff; }
+.pl-play svg{ width:20px; height:20px; }
+.pl-play .icon-pause{ display:none; }
+.player.is-playing .pl-play .icon-play{ display:none; }
+.player.is-playing .pl-play .icon-pause{ display:block; }
+
+/* --- track list --- */
+.playlist{ list-style:none; margin:0; padding:0; border-top:1px solid rgba(255,255,255,.14); }
+.playlist li + li{ border-top:1px solid rgba(255,255,255,.08); }
+.playlist button{
+  width:100%; display:flex; align-items:center; gap:16px;
+  padding:14px 28px; background:none; border:0; cursor:pointer;
+  text-align:left; color:#cdd4f0; font:inherit;
+  transition:background .2s ease, color .2s ease;
+}
+.playlist button:hover{ background:rgba(255,255,255,.07); color:#fff; }
+.playlist button:focus-visible{ outline:2px solid var(--gold); outline-offset:-2px; }
+.pl-num{
+  flex:0 0 22px; font-size:.8rem; text-align:center;
+  font-variant-numeric:tabular-nums; opacity:.6;
+}
+.pl-name{ flex:1; min-width:0; }
+.pl-name strong{ display:block; color:#fff; font-weight:500; font-size:1rem; }
+.pl-name span{ display:block; font-size:.82rem; opacity:.72; }
+.pl-len{ flex:0 0 auto; font-size:.8rem; font-variant-numeric:tabular-nums; opacity:.66; }
+
+.playlist .playing{ background:rgba(244,184,30,.1); }
+.playlist .playing .pl-num{ color:var(--gold); opacity:1; }
+.playlist .playing .pl-name strong{ color:var(--gold); }
+
+/* Equaliser bars mark the current track; they only animate while it plays. */
+.pl-bars{ display:none; gap:2px; align-items:flex-end; height:13px; }
+.playlist .playing .pl-bars{ display:flex; }
+.playlist .playing .pl-num{ display:none; }
+.pl-bars i{ width:3px; height:5px; background:var(--gold); border-radius:1px; }
+.player.is-playing .playing .pl-bars i{ animation:eq .9s ease-in-out infinite; }
+.player.is-playing .playing .pl-bars i:nth-child(2){ animation-delay:.3s; }
+.player.is-playing .playing .pl-bars i:nth-child(3){ animation-delay:.6s; }
+@keyframes eq{ 0%,100%{ height:4px; } 50%{ height:13px; } }
+
+.player-note{ text-align:center; margin-top:1.6em; font-size:.84rem; opacity:.7; }
+
+/* No-JS fallback: swap the custom transport for plain browser audio players. */
+html:not(.js) .player-now,
+html:not(.js) .playlist{ display:none; }
+.player-plain{ padding:28px; }
+.player-plain p{ margin:0 0 .5em; color:#fff; font-size:.95rem; }
+.player-plain audio{ width:100%; margin-bottom:1.2em; }
+html.js .player-plain{ display:none; }
+
+@media (max-width:640px){
+  .player-now{ flex-direction:column; text-align:center; gap:18px; padding:24px 18px; }
+  .player-art{ flex:0 0 auto; width:170px; height:170px; }
+  .player-ctrls{ justify-content:center; }
+  .playlist button{ padding:14px 18px; gap:12px; }
+  .pl-name span{ display:none; }
+}
+@media (prefers-reduced-motion:reduce){
+  .player.is-playing .playing .pl-bars i{ animation:none; height:9px; }
+}
