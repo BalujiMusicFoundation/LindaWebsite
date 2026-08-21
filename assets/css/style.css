@@ -565,7 +565,10 @@ html.js .reveal.in{ opacity:1; transform:none; }
 .player.is-playing .playing .pl-bars i:nth-child(3){ animation-delay:.6s; }
 @keyframes eq{ 0%,100%{ height:4px; } 50%{ height:13px; } }
 
-.player-note{ text-align:center; margin-top:1.6em; font-size:.84rem; opacity:.7; }
+/* Sits above the player, so it needs to read at a glance. */
+.player-note{ margin:.4em 0 0; font-size:1.15rem; color:#fff; }
+.player-note a{ color:var(--gold); font-weight:600; border-bottom:1px solid rgba(244,184,30,.5); }
+.player-note a:hover{ color:#fff; border-bottom-color:#fff; }
 
 /* No-JS fallback: swap the custom transport for plain browser audio players. */
 html:not(.js) .player-now,
