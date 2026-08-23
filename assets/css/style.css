@@ -409,10 +409,16 @@ img{ max-width:100%; display:block; }
 figure{ margin:0; }
 figcaption{ font-size:.84rem; color:var(--ink-soft); }
 
+/* Always a white card, so it sets its own ink colour rather than
+   inheriting white text from a dark panel. */
 .extract{
   background:#fff; border-radius:16px; padding:38px 42px;
   font-size:1.05rem; box-shadow:0 18px 50px -34px rgba(20,27,77,.5);
+  color:var(--ink);
 }
+.extract h1,.extract h2,.extract h3,
+.panel.night .extract h1,.panel.night .extract h2,.panel.night .extract h3,
+.panel.teal .extract h1,.panel.teal .extract h2,.panel.teal .extract h3{ color:var(--teal-deep); }
 .extract .signoff{ font-weight:600; color:var(--rose); margin-top:1.4em; }
 .lyric{ white-space:pre-line; font-family:var(--font-display); font-weight:400; font-style:italic; font-size:1.2rem; color:var(--teal-deep); }
 
