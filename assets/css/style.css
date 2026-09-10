@@ -594,3 +594,26 @@ html.js .player-plain{ display:none; }
 @media (prefers-reduced-motion:reduce){
   .player.is-playing .playing .pl-bars i{ animation:none; height:9px; }
 }
+
+/* ============================================================
+   SCRIPT PAGE (Raaja Ajaar)
+   ============================================================ */
+.script{ font-size:1rem; line-height:1.75; }
+.script-title{
+  font-family:var(--font-display); font-size:1.6rem; font-weight:600;
+  color:var(--teal-deep); margin-bottom:1.6em; letter-spacing:.02em;
+}
+.script-title span{ display:block; font-size:1rem; font-weight:400; font-style:italic; opacity:.75; }
+.script b{ color:var(--rose); font-weight:600; letter-spacing:.04em; }
+/* Verse keeps the poet's own line breaks. */
+.script .verse{ white-space:pre-line; }
+.script span.verse{ display:block; }
+/* Stage directions sit quieter than the spoken text. */
+.script .cue{ font-style:italic; color:var(--ink-soft); }
+.script .cue-inline{ font-style:italic; color:var(--ink-soft); }
+.script .star{ text-align:center; color:var(--gold); letter-spacing:.4em; margin:1.6em 0; }
+.script .the-end{
+  text-align:center; font-family:var(--font-display); font-size:1.2rem;
+  color:var(--teal-deep); letter-spacing:.18em; margin-top:2em;
+}
+@media (max-width:640px){ .script{ font-size:.95rem; } }
