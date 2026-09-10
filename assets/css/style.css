@@ -617,3 +617,14 @@ html.js .player-plain{ display:none; }
   color:var(--teal-deep); letter-spacing:.18em; margin-top:2em;
 }
 @media (max-width:640px){ .script{ font-size:.95rem; } }
+
+/* ============================================================
+   DRIVE-HOSTED RECORDING
+   ============================================================ */
+.drive-player{
+  max-width:720px; margin:0 auto;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:16px; overflow:hidden;
+}
+.drive-player iframe{ width:100%; height:200px; border:0; display:block; }
